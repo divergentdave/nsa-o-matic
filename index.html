@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>NSA-O-Matic</title>
+<style type="text/css">
+.container {
+    max-width: 40em;
+    margin: auto;
+}
+.headline {
+    font-size: 18pt;
+    font-family: sans-serif;
+}
+.madlib {
+    background-color: rgb(220, 220, 220);
+    border-color: rgb(180, 180, 180);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+.btnbox {
+    text-align: center;
+    padding: 24pt;
+}
+.c2a {
+    max-width: 60em;
+    margin: auto;
+    padding: 24pt;
+}
+#btn {
+    font-size: 18pt;
+    background-color: rgb(150, 255, 150);
+}
+body {
+    background-image: url('http://');
+}
+</style>
+<script>
+// Source: http://www.laquadrature.net/wiki/Usa_surveillance_tools
+var wordParts = [
+    ['AQUA', 'CADE'],
+    ['BEACH', 'HEAD'],
+    ['BLUE', 'ANCHOR'],
+    ['BLUE', 'ZEPHYR'],
+    ['BOUNDLESS', 'INFORMANT'],
+    ['BULL', 'RUN'],
+    ['BYE', 'MAN'],
+    ['COBALT', 'FALCON'],
+    ['CONTRA', 'OCTAVE'],
+    ['DEW', 'SWEEPER'],
+    ['DROP', 'MIRE'],
+    ['DRT', 'BOX'],
+    ['EGOTISTICAL', 'GIRAFFE'],
+    ['EGOTISTICAL', 'GOAT'],
+    ['ERRONEOUS', 'INGENUITY'],
+    ['EVENING', 'EASEL'],
+    ['EVIL', 'OLIVE'],
+    ['FAIR', 'VIEW'],
+    ['FOX', 'ACID'],
+    ['HIGH', 'LANDS'],
+    ['JUMP', 'SEAT'],
+    ['MADCAP', 'OCELOT'],
+    ['MONKEY', 'ROCKET'],
+    ['MOONLIGHT', 'PATH'],
+    ['OAK', 'STAR'],
+    ['ORANGE', 'BLOSSOM'],
+    ['ORANGE', 'CRUSH'],
+    ['PATH', 'FINDER'],
+    ['PIN', 'WALE'],
+    ['SHELL', 'TRUMPET'],
+    ['SHIFTING', 'SHADOW'],
+    ['SILK', 'WORTH'],
+    ['STELLAR', 'WIND'],
+    ['STORM', 'BREW'],
+    ['SILVER', 'ZEPHYR'],
+    ['THIN', 'TREAD'],
+    ['TRAFFIC', 'THIEF'],
+    ['TRAIL', 'BLAZER'],
+    ['XKEY', 'SCORE'],
+    ['YACHT', 'SHOP'],
+
+    ['AGILE', 'VIEW'],
+    ['AIR', 'GAP'],
+    ['AIR', 'STEED'],
+    ['AQUA', 'DOR'],
+    ['AUTO', 'SOURCE'],
+    ['BELL', 'TOPPER'],
+    ['BELL', 'VIEW'],
+    ['BLACK', 'FOOT'],
+    ['BLACK', 'HEART'],
+    ['BLACK', 'MAGIC'],
+    ['BLACK', 'PEARL'],
+    ['BLACK', 'WATCH'],
+    ['BULLS', 'EYE'],
+    ['CENTER', 'MASS'],
+    ['CHALK', 'FUN'],
+    ['CHASE', 'FALCON'],
+    ['CHEW', 'STICK'],
+    ['CIMBRI', 'CINEPLEX'],
+    ['COAST', 'LINE'],
+    ['COURIER', 'SKILL'],
+    ['CRISS', 'CROSS'],
+    ['DANCING', 'OASIS'],
+    ['DANGER', 'MOUSE'],
+    ['DARK', 'THUNDER'],
+    ['DECK', 'PIN'],
+    ['DISH', 'FIRE'],
+    ['DRAGON', 'FLY'],
+    ['FACE', 'LIFT'],
+    ['FALL', 'OUT'],
+    ['FISH', 'BOWL'],
+    ['FOX', 'TRAIL'],
+    ['GLOBAL', 'BROKER'],
+    ['HIDE', 'TIDE'],
+    ['HOME', 'BASE'],
+    ['INTEL', 'INK'],
+    ['IVY', 'BELLS'],
+    ['LIFE', 'SAVER'],
+    ['LONG', 'HAUL'],
+    ['MAGIC', 'LANTERN'],
+    ['MAIL', 'ORDER'],
+    ['MAIN', 'CORE'],
+    ['OIL', 'STOCK'],
+    ['OCT', 'SKYWARD'],
+    ['ONE', 'ROOF'],
+    ['PUZZLE', 'CUBE'],
+    ['SHARK', 'FIN'],
+    ['SKY', 'WRITER'],
+    ['SPOT', 'BEAM'],
+    ['STEEL', 'KNIGHT'],
+    ['STUMP', 'CURSOR'],
+    ['TALENT', 'KEYHOLE'],
+    ['TAPER', 'LAY'],
+    ['TAROT', 'CARD'],
+    ['TREASURE', 'MAP'],
+    ['TUNING', 'FORK'],
+    ['TUSK', 'ATTIRE'],
+    ['WEALTHY', 'CLUSTER'],
+    ['WEB', 'CANDID'],
+    ['WHITE', 'BOX'],
+];
+
+var types = [
+    'surveillance tool',
+    'network-based attack',
+    'cryptanalytic technique',
+    'exploit toolkit',
+    'massive database',
+    'searchable database',
+    'surveillance program',
+    'software tool',
+    'cluster of computers',
+    'lawful intercept feature',
+    'surveillance satellite',
+    'full-take collection point',
+    'USB hardware host tap',
+];
+
+var verbs = [
+    'copies',
+    'spies on',
+    'spoofs',
+    'cracks',
+    'does a man-in-the-middle attack on',
+    'undermined NIST standards for securing',
+    'remotely records',
+    'deanonymizes',
+    'indefinitely stores',
+    'surreptitiously records',
+    'decrypts',
+    'intercepts',
+    'monitors',
+    'tracks',
+    'bugs',
+];
+
+var nouns = [
+    'SSL connections',
+    'identities of TOR users',
+    'SMS messages',
+    'cell phone call records',
+    'webmail accounts',
+    'emails',
+    'pager messages',
+    'undersea fiberoptic cables',
+    'the backbone of the internet',
+    'consumer-grade routers',
+    'computers at European telecom companies',
+    'Angela Merkel\'s text messages',
+    'social networking profiles',
+    'cloud storage databases',
+    'private fiber-optic lines used by Google and Yahoo',
+    'communications satellites',
+    'certificate authority keys',
+    'random number generators',
+    'Facebook messages',
+    'VPN connections',
+    'email attachments',
+    'conversations within earshot of laptop microphones',
+    'one tenth of all internet traffic',
+    'international telephone calls',
+    'traffic from major internet exchanges',
+    'cellular data connections',
+    'foreign embassies',
+    'emails of foreign heads of state',
+];
+
+var feds = [
+    'President Barack Obama',
+    'General Keith Alexander, Director of the National Security Agency,',
+    'James Clapper, the Director of National Intelligence,',
+    'Senator Dianne Feinstein',
+    'An anonymous administration source',
+];
+
+var checks = [
+    'is rubber stamped by a secret court',
+    'is reviewed by Congress every five years',
+    'is only used to combat terrorism',
+    'undergoes strict quality control procedures',
+    'would only be used in the event of a national emergency',
+    'was approved by the House and Senate Intelligence Committees',
+    'only collects information on foreign citizens',
+    'discards information as soon it is determined to be irrelevant',
+    'is authorized by a section of the PATRIOT Act',
+];
+
+function removeChildren(elem) {
+    while (elem.lastChild) {
+        elem.removeChild(elem.lastChild);
+    }
+}
+
+function pick(list) {
+    var index = Math.floor(Math.random() * list.length);
+    return list[index];
+}
+
+function addText(elem, text) {
+    elem.appendChild(document.createTextNode(text));
+}
+
+function spin() {
+    var codenameSpan = document.getElementById('codename');
+    var typeSpan = document.getElementById('type');
+    var verbSpan = document.getElementById('verb');
+    var nounSpan = document.getElementById('noun');
+    var fedSpan = document.getElementById('fed');
+    var checkSpan = document.getElementById('check');
+    var i, j;
+    while (true) {
+        i = Math.floor(Math.random() * wordParts.length);
+        j = Math.floor(Math.random() * wordParts.length);
+        if (i == j) continue;
+        if (wordParts[i][0] == wordParts[j][0]) continue;
+        if (wordParts[i][1] == wordParts[j][1]) continue;
+        break;
+    }
+    var codename = wordParts[i][0] + wordParts[j][1];
+    var type = pick(types);
+    var verb = pick(verbs);
+    var noun = pick(nouns);
+    var fed = pick(feds);
+    var check = pick(checks);
+    removeChildren(codenameSpan);
+    addText(codenameSpan, codename);
+    removeChildren(typeSpan);
+    addText(typeSpan, type);
+    removeChildren(verbSpan);
+    addText(verbSpan, verb);
+    removeChildren(nounSpan);
+    addText(nounSpan, noun);
+    removeChildren(fedSpan);
+    addText(fedSpan, fed);
+    removeChildren(checkSpan);
+    addText(checkSpan, check);
+}
+
+function setup() {
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', spin);
+    spin();
+}
+
+document.addEventListener('DOMContentLoaded', setup);
+</script>
+</head>
+<body>
+<div class="container">
+<span class="headline">Recently released NSA documents revealed the existence of
+    <span class="madlib" id="codename">the Options menu</span>, a
+    <span class="madlib" id="type">feature of your browser</span> that
+    <span class="madlib" id="verb">lets you enable</span>
+    <span class="madlib" id="noun">JavaScript</span>.
+    <span class="madlib" id="fed">The developer of this page</span> assured the
+    public that the program
+    <span class="madlib" id="check">needs JavaScript to run</span>.
+</span>
+</div>
+<div class="btnbox">
+<button id="btn" onclick="spin();">Spin again</button>
+</div>
+<div class="c2a">
+<h2>Now what?</h2>
+<ul>
+    <li>Truth is scarier than fiction.
+    Read up on the NSA's actual programs from
+    <a href="http://www.theguardian.com/profile/glenn-greenwald">Glenn Greenwald</a>,
+    <a href="https://www.schneier.com/">Bruce Schneier</a>,
+    or elsewhere across the web.</li>
+    <li>Help change the system. The folks at
+    <a href="http://www.demandprogress.org/">Demand Progress</a> and the
+    <a href="https://www.eff.org/"><acronym title="Electronic Frontier Foundation">EFF</acronym></acronymn></a>
+    do good work, and they could use your voice or any donation you can muster.
+    </li>
+    <li>Protect your own communications. Visit
+    <a href="https://www.prism-break.org/">PRISM Break</a> to learn about
+    available technical solutions. For secure text messaging and phone calls,
+    see <a href="https://whispersystems.org/">Open WhisperSystems</a>. Visit the
+    <a href="https://www.torproject.org/">Tor Project</a> to learn how to browse
+    the web more anonymously. Keep an eye on the
+    <a href="https://www.darkmail.info/">Dark Mail Alliance</a> in the coming
+    year for a new way to encrypt email.
+    </li>
+</ul>
+</div>
+<a href="https://github.com/divergentdave/nsa-o-matic"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
